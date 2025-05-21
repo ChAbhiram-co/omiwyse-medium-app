@@ -20,7 +20,8 @@ function Weather() {
     setShowMap(false);
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)//this first api
-      .then(response => response.json()) // Convert the response body to JSON.transforming the raw data that the server sends back in the response into a format that can be easily used and understood by JavaScript.
+      .then(response => response.json()) // Convert the response body to JSON.transforming the raw data that the server sends back in the response
+      // into a format that can be easily used and understood by JavaScript.
       .then(data => {
         // Check if the status code from the API response is 200 (success). If not, throw an error with the message from the API.
         if (data.cod !== 200) {
