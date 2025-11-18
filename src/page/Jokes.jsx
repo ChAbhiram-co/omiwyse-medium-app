@@ -14,6 +14,8 @@ function Jokes() {
       .then((data) => {
 
 
+        
+
         setJokes(Array.isArray(data) ? data : [data]);
         setLoading(false);
       })
