@@ -12,10 +12,6 @@ function Jokes() {
     fetch(`https://official-joke-api.appspot.com/jokes/random/` + count)
       .then((response) => response.json())
       .then((data) => {
-
-
-        
-
         setJokes(Array.isArray(data) ? data : [data]);
         setLoading(false);
       })
